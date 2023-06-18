@@ -9,9 +9,9 @@ interface ProvidersProps {
   
 }
 
-const Providers: FC<ProvidersProps> = ({children}) => {
-    const queryClient = new QueryClient()
+const queryClient = new QueryClient()
 
+const Providers: FC<ProvidersProps> = ({children}) => {
     return (
         <QueryClientProvider client={queryClient}>
             <MessagesProvider>
